@@ -30,6 +30,7 @@ setup(
         ),
     ],
     install_requires=['setuptools'],
+    tests_require=['pytest'],
     zip_safe=True,
     maintainer='laptop4',
     maintainer_email='laptop4@todo.todo',

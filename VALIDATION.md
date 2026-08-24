@@ -17,3 +17,9 @@ E2E01、AD04-R1、AD04-R2、AD04-R3 与 CMP01-SLAMONLY 的源码清单均与
 为了保持正式实验源码哈希不变，精确实验标签保留两处格式提示和
 `setup.py` 中缺少的 pytest 集成声明。这些非功能性问题在后续
 `release-clean-20260824` 标签中修复。
+
+## 清理发布版本
+
+`release-clean-20260824` 在精确实验提交之后仅修复两处格式问题及 pytest
+测试集成配置。清理版本已重新通过包级 pytest、colcon build 和 colcon test。
+精确实验源码仍由 `experiment-exact-20260816` 标签永久保留。

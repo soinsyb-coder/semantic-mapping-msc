@@ -228,7 +228,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             'rtabmap_args': (
-            '--delete_db_on_start '
+                '--delete_db_on_start '
                 '--RGBD/LinearUpdate 0.05 '
                 '--RGBD/AngularUpdate 0.05'
             ),
