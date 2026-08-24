@@ -1,0 +1,36 @@
+Run ID: 20260813-220017-E2E01
+Start: 2026-08-13T22:00:17+01:00
+Purpose: full autonomous exploration and semantic-map generation
+Scene: AWS RoboMaker Small House
+ROS distro: jazzy
+Semantic baseline: YOLO11n CPU, imgsz=640, detector=0.25
+Fusion baseline: confidence=0.50, radius=0.60 m, 3/10/10
+Policy: no tuning and no manual driving unless explicitly marked
+Host: laptop4-HP-EliteBook-640-14-inch-G10-Notebook-PC
+Kernel: Linux 7.0.0-28-generic x86_64 GNU/Linux
+Workspace: /home/laptop4/semantic_ws
+[semantic_perception]
+Commit: 1da2089c806dc8ab85e25df1972df454101e0e65
+Branch: main
+Status:
+ M config/rgbd_yolo_localizer.yaml
+ M semantic_perception/rgbd_yolo_localizer_node.py
+ M setup.py
+?? config/slam_drift_diagnostic.yaml
+?? launch/slam_drift_diagnostic.launch.py
+?? semantic_perception/fusion_diagnostics.py
+?? semantic_perception/semantic_object_fusion.py
+?? semantic_perception/slam_drift_diagnostic_node.py
+?? semantic_perception/slam_drift_metrics.py
+?? test/test_fusion_diagnostics.py
+?? test/test_semantic_object_fusion.py
+?? test/test_slam_drift_metrics.py
+Diff stat:
+ config/rgbd_yolo_localizer.yaml                 |  21 +-
+ semantic_perception/rgbd_yolo_localizer_node.py | 274 +++++++++++++++++++++---
+ setup.py                                        |   4 +
+ 3 files changed, 264 insertions(+), 35 deletions(-)
+[semantic_mapping_bringup]
+Not a Git worktree: /home/laptop4/semantic_ws/src/semantic_mapping_bringup
+End: 2026-08-13T22:46:44+01:00
+Duration seconds: 2787

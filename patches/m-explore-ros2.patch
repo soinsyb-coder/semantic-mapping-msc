@@ -1,0 +1,21 @@
+diff --git a/explore/src/costmap_client.cpp b/explore/src/costmap_client.cpp
+index ae2da83..46ef9ec 100644
+--- a/explore/src/costmap_client.cpp
++++ b/explore/src/costmap_client.cpp
+@@ -69,8 +69,14 @@ Costmap2DClient::Costmap2DClient(rclcpp::Node& node, const tf2_ros::Buffer* tf)
+   node_.get_parameter("transform_tolerance", transform_tolerance_);
+ 
+   /* initialize costmap */
+-  costmap_sub_ = node_.create_subscription<nav_msgs::msg::OccupancyGrid>(
+-      costmap_topic, 1000,
++  auto map_qos = rclcpp::QoS(rclcpp::KeepLast(1))
++                     .reliable()
++                     .transient_local();
++
++  costmap_sub_ =
++    node_.create_subscription<nav_msgs::msg::OccupancyGrid>(
++      costmap_topic,
++      map_qos,
+       [this](const nav_msgs::msg::OccupancyGrid::SharedPtr msg) {
+         costmap_received_ = true;
+         updateFullMap(msg);

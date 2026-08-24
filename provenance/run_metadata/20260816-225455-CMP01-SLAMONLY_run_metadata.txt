@@ -1,0 +1,31 @@
+Run ID: 20260816-225455-CMP01-SLAMONLY
+Condition: A - SLAM-only
+Reference condition: B - AD04-R3 SLAM+YOLO
+Reference run: /home/laptop4/semantic_ws/experiments/20260816-212856-AD04-R3
+Start: 2026-08-16T22:54:55+01:00
+Purpose: controlled comparison of SLAM-only against frozen SLAM+YOLO baseline
+Scene: AWS RoboMaker Small House
+Motion: exact AD04-R1 ten-event cmd_vel schedule replayed using simulation time
+Exclusions: no RGB-D YOLO localizer, semantic fusion, Nav2 or explore_lite
+Analysis policy: compare the formal route simulation-time window, not whole-run database counts
+Host: laptop4-HP-EliteBook-640-14-inch-G10-Notebook-PC
+Kernel: Linux 7.0.0-28-generic x86_64 GNU/Linux
+Git status:
+ M config/rgbd_yolo_localizer.yaml
+ M semantic_perception/rgbd_yolo_localizer_node.py
+ M setup.py
+?? ===n'
+?? config/slam_drift_diagnostic.yaml
+?? "e_sim_time|confidence|imgsz|fusion_|max_distance|torch_threads' "
+?? launch/slam_drift_diagnostic.launch.py
+?? "ource diff ===n'"
+?? semantic_perception/fusion_diagnostics.py
+?? semantic_perception/semantic_object_fusion.py
+?? semantic_perception/slam_drift_diagnostic_node.py
+?? semantic_perception/slam_drift_metrics.py
+?? "talled hashes ===n'"
+?? test/test_fusion_diagnostics.py
+?? test/test_semantic_object_fusion.py
+?? test/test_slam_drift_metrics.py
+Git commit:
+1da2089c806dc8ab85e25df1972df454101e0e65

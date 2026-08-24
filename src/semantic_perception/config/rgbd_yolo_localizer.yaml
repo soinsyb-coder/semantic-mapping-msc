@@ -1,0 +1,41 @@
+rgbd_yolo_localizer_node:
+  ros__parameters:
+    use_sim_time: true
+    image_topic: /camera/image
+    depth_topic: /camera/depth_image
+    camera_info_topic: /camera/camera_info
+    annotated_topic: /yolo/rgbd_annotated_image
+    device: cpu
+    imgsz: 640
+    confidence: 0.25
+    torch_threads: 4
+    sync_queue_size: 10
+    sync_slop: 0.10
+    depth_region_scale: 0.50
+    min_valid_ratio: 0.20
+    min_depth_m: 0.10
+    max_depth_m: 10.0
+    log_interval: 10
+    map_frame: map
+    marker_topic: /semantic_map/markers
+    tf_timeout_sec: 0.10
+    marker_scale: 0.25
+    fusion_min_confidence: 0.50
+    fusion_min_valid_ratio: 0.50
+    fusion_allowed_classes:
+      - bed
+      - chair
+      - couch
+      - dining table
+      - microwave
+      - oven
+      - potted plant
+      - refrigerator
+      - sink
+      - toilet
+      - tv
+    fusion_max_detection_distance_m: 6.0
+    fusion_radius_m: 0.60
+    fusion_confirmation_hits: 3
+    fusion_confirmation_window: 10
+    fusion_max_missed_frames: 10

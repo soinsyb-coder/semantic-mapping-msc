@@ -1,0 +1,33 @@
+# ROS 2 生成目录
+build/
+install/
+log/
+
+# Python 环境与缓存
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+
+# YOLO 生成结果
+runs/
+
+# 大型实验数据单独归档
+experiments/
+analysis/
+*.mcap
+*.db
+*.sqlite
+*.sqlite3
+*.bag
+*.tar.gz
+
+# 本地备份与编辑器
+*.bak
+*.backup
+*~
+.DS_Store
+.vscode/
+.idea/

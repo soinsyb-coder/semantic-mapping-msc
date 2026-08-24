@@ -1,0 +1,30 @@
+Run ID: 20260816-203531-AD04-R2
+Repeat: R2
+Start: 2026-08-16T20:35:31+01:00
+Purpose: fixed-baseline AD04 semantic-fusion repeatability
+Scene: AWS RoboMaker Small House
+Baseline: YOLO11n CPU imgsz=640 detector=0.25
+Fusion: confidence=0.50 radius=0.60 m confirmation=3/10 max_missed=10
+Ground-truth region: 4 chairs and 1 dining table; at most 3 chairs visible in one view
+Policy: no parameter changes; motion input recorded on R1 and replayed on R2/R3
+Host: laptop4-HP-EliteBook-640-14-inch-G10-Notebook-PC
+Kernel: Linux 7.0.0-28-generic x86_64 GNU/Linux
+Git status:
+ M config/rgbd_yolo_localizer.yaml
+ M semantic_perception/rgbd_yolo_localizer_node.py
+ M setup.py
+?? ===n'
+?? config/slam_drift_diagnostic.yaml
+?? "e_sim_time|confidence|imgsz|fusion_|max_distance|torch_threads' "
+?? launch/slam_drift_diagnostic.launch.py
+?? "ource diff ===n'"
+?? semantic_perception/fusion_diagnostics.py
+?? semantic_perception/semantic_object_fusion.py
+?? semantic_perception/slam_drift_diagnostic_node.py
+?? semantic_perception/slam_drift_metrics.py
+?? "talled hashes ===n'"
+?? test/test_fusion_diagnostics.py
+?? test/test_semantic_object_fusion.py
+?? test/test_slam_drift_metrics.py
+Git commit:
+1da2089c806dc8ab85e25df1972df454101e0e65

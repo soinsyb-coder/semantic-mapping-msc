@@ -1,0 +1,6 @@
+dependency	branch	commit	upstream
+aws-robomaker-small-house-world	ros2	ff9631ca6d1db9c1ba656498151464b5ab74aafe	https://github.com/aws-robotics/aws-robomaker-small-house-world.git
+m-explore-ros2	main	326cf8a0b487c34246bb8f3326afbcd69576dc60	https://github.com/robo-friends/m-explore-ros2.git
+turtlebot3	humble	90a68bd2e3c61c12966779da89d8eeaec82730e9	https://github.com/ROBOTIS-GIT/turtlebot3.git
+turtlebot3_simulations	humble	a35a56c8b04877dc89772b598084d8ce648a9023	https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+semantic_perception_base	main	1da2089c806dc8ab85e25df1972df454101e0e65	https://github.com/soinsyb-coder/semantic_perception.git

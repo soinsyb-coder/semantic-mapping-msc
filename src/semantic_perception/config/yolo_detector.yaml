@@ -1,0 +1,8 @@
+yolo_detector_node:
+  ros__parameters:
+    image_topic: /camera/image
+    annotated_topic: /yolo/annotated_image
+    device: cpu
+    imgsz: 640
+    confidence: 0.25
+    torch_threads: 4

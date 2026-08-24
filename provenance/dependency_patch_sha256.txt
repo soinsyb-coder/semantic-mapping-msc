@@ -1,0 +1,2 @@
+4c45638714b7e91abc6bfe62a8dd29497a2e949aa60b569b66ac8a9be65fea94  /home/laptop4/semantic_mapping_msc/patches/aws-small-house-world.patch
+1467f7f92d26b3f8bc1834a3956a2985c08c5fb11611eba026e8e332d1811fa7  /home/laptop4/semantic_mapping_msc/patches/m-explore-ros2.patch
